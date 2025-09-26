@@ -12,6 +12,7 @@
   "type": "commonjs",
   "dependencies": {
     "chai": "^4.3.10",
+    "dotenv": "^17.2.2",
     "mocha": "^11.7.2",
     "mochawesome": "^7.1.4",
     "supertest": "^7.1.4"
