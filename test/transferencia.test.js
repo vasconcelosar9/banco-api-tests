@@ -4,7 +4,7 @@ const { expect } = require('chai')
 describe('Trasnferências', () => {
     describe('POST /transferencias', () => {
         it('Deve retornar sucesso com 201 quando o valor da transferência for igual ou maior que R$ 10,00', async () => {
-            const resLogin = await request('http://localhost:3000')
+            const resLogin = await request(process.env.BASE_URL)
                 .post('/login')
                 .set('Content-Type', 'application/json')
                 .send({
@@ -13,7 +13,7 @@ describe('Trasnferências', () => {
                 })
             const token = resLogin.body.token
 
-            const res = await request('http://localhost:3000')
+            const res = await request(process.env.BASE_URL)
                 .post('/transferencias')
                 .set('Content-Type', 'application/json')
                 .set('Authorization', `Bearer ${token}`)
