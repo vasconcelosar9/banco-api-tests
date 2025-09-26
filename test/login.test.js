@@ -1,5 +1,5 @@
-const request = require('supertest');
-const { expect } = require('chai');
+const request = require('supertest')
+const { expect } = require('chai')
 
 describe('Login', () => {
     describe('POST /login', () => {
@@ -8,11 +8,11 @@ describe('Login', () => {
                 .post('/login')
                 .set('Content-Type', 'application/json')
                 .send({
-                    'username': 'julio.lima',
-                    'senha': '123456'
+                    username: 'julio.lima',
+                    senha: '123456'
                 })
-            expect(res.status).to.equal(200);
-            expect(res.body.token).to.be.a('string');
-        });
-    });
-});
+            expect(res.status).to.equal(200)
+            expect(res.body.token).to.be.a('string')
+        })
+    })
+})
